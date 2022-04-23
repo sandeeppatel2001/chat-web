@@ -77,8 +77,8 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", () => {
     const user = removeUser(socket.id);
-    count = count - 1;
     if (user) {
+      count = count - 1;
       io.to(user.room).emit(
         "message",
         generateMessage("Admin", `${user.username} has left!`)
@@ -86,6 +86,7 @@ io.on("connection", (socket) => {
       io.to(user.room).emit("roomData", {
         room: user.room,
         users: getUsersInRoom(user.room),
+        count,
       });
     }
   });
