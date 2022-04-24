@@ -3,8 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 30px;
+  }
+}
 html {
-  font-size: 16px;
+  font-size: 17px;
 }
 input {
   font-size: 14px;
@@ -70,8 +75,8 @@ button:disabled {
 }
 .chat__sidebar {
   height: 100vh;
-  color: #fff;
-  background: #333744;
+  color: rgb(19, 18, 18);
+  background: #26ef62;
   width: 225px;
   overflow-y: scroll;
 }
@@ -125,7 +130,7 @@ button:disabled {
 .room-title {
   font-weight: 400;
   font-size: 22px;
-  background: #2c2f3a;
+  background: #26ef62;
   padding: 24px;
 }
 .list-title {
